@@ -77,7 +77,7 @@ With Lobby running, when it receives a `SIGHUP` signal, it will reprocess the co
 
 [This demo configuration](https://raw.githubusercontent.com/ipbuff/lobby/main/docs/examples/demo.conf) will be used for test purposes.
 
-``` bash title="Get Lobby Demo Config File"
+``` title="Get Lobby Demo Config File"
 wget -q \
   -O lobby.conf \
   https://raw.githubusercontent.com/ipbuff/lobby/main/docs/examples/demo.conf
@@ -85,7 +85,7 @@ wget -q \
 
 In order to run Lobby on docker use the command below:
 
-``` bash
+``` 
 docker run --rm -d \
   --name lobby  \
   --cap-add=NET_ADMIN --cap-add=NET_RAW \
@@ -117,7 +117,7 @@ for i in {1..6}; do curl localhost:8082; done
 
 Finally, when you're done with testing, just stop the Lobby container with:
 
-``` bash
+```
 docker stop lobby
 ```
 
@@ -125,7 +125,7 @@ In order to setup the load balancing as per your needs, feel free to edit the `.
 
 With Lobby running, when it receives a `SIGHUP` signal, it will reprocess the config file and reconfigure the load balancing based on the updated config file contents. To send a SIGHUP to the Lobby container just:
 
-``` bash
+``` 
 docker kill -s SIGHUP lobby
 ```
 
