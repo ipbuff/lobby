@@ -5,8 +5,18 @@ LOBBY_BIN_PATH=${LOBBY_BIN_DIR}/${LOBBY_BIN_NAME}
 LOBBY_CONF_DIR='/etc/lobby'
 LOBBY_ROOT_SERVICE_PATH='/etc/systemd/system/lobby.service'
 
+RED='\033[0;31m'
+NC='\033[0m' # No color
+
 intro() {
     echo Uninstalling Lobby
+}
+
+checkDeps() {
+    if [ "$(id -u)" -ne 0 ]; then
+        printf '%bThis uninstaller must be run as '\''root'\'' user%b\n\n' "$RED" "$NC"
+        exit 1
+    fi
 }
 
 deleteBin() {
@@ -38,6 +48,8 @@ outro() {
 }
 
 intro
+
+checkDeps
 
 deleteBin
 
