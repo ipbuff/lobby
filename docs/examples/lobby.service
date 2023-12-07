@@ -1,0 +1,21 @@
+[Unit]
+Description=Lobby Load Balancer
+After=network.target
+
+[Service]
+Type=simple
+User={{ username }}
+ExecStart=/usr/local/bin/lobby
+ExecStop=/bin/kill -s SIGINT $MAINPID
+ExecReload=/bin/kill -s SIGHUP $MAINPID
+TimeoutStartSec=0
+RestartSec=2
+Restart=always
+StartLimitBurst=3
+StartLimitInterval=60s
+
+[Install]
+WantedBy=multi-user.target
+
+[Install]
+WantedBy=multi-user.target

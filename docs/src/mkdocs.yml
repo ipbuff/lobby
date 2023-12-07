@@ -1,0 +1,66 @@
+site_name: Lobby
+copyright: Copyright &copy; 2023 - Igor Borisoglebski
+repo_url: https://github.com/ipbuff/lobby
+theme:
+  name: material
+  language: en
+  favicon: assets/logo.png
+  logo: assets/logo.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  font: false
+  features:
+    - navigation.footer
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+nav:
+  - index.md
+  - features.md
+  - installation.md
+  - configuration.md
+  - tutorials.md
+  - support.md
+  - contacts.md
+  - about.md
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/ipbuff/lobby/
+      name: Lobby on Github
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+plugins:
+  - awesome-pages
