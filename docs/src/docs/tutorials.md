@@ -336,6 +336,8 @@ You can run it as a root user with:
 wget -q -O - https://ipbuff.com/uninstallLobby | sh
 ```
 
+And then finally, complete with a systemd refresh with `systemctl daemon-reload`.
+
 ## Docker
 This tutorial will be assuming your default docker network is a bridge network (as it is most likely the case and) as it happens by default after docker install. In case this is not the case, adjust the steps and commands accordingly.
 
