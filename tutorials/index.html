@@ -1,0 +1,1649 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../configuration/">
+      
+      
+        <link rel="next" href="../support/">
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.0">
+    
+    
+      
+        <title>Tutorials - Lobby</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#building-from-source" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Lobby" class="md-header__button md-logo" aria-label="Lobby" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lobby
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorials
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ipbuff/lobby" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lobby" class="md-nav__button md-logo" aria-label="Lobby" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Lobby
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ipbuff/lobby" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building-from-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building from source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-binaries-and-running-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the binaries and running Lobby
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting the binaries and running Lobby">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Lobby
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI Help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Lobby
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Lobby">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Lobby
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopping-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Lobby
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifying-a-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying a Config File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbosity-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verbosity Level
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lobby-systemd-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lobby systemd Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lobby systemd Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-lobby-systemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Lobby (systemd)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Lobby (systemd)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-root-user-systemd-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      As root user systemd service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="As root user systemd service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Improvement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-non-root-user-systemd-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      As non-root user systemd service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uninstall-lobby-systemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstall Lobby (systemd)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-version_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-lobby-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Lobby on Docker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Lobby on Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-lobby-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Lobby on Docker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-config-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Config on Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopping-lobby-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Lobby on Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbosity-level-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verbosity level on Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#things-to-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Things to Note
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Things to Note">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#container-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container Ports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Production on Docker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerations-for-production-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations for Production Deployments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traffic-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traffic Stats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating Config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-target-to-two-upstreams" class="md-nav__link">
+    <span class="md-ellipsis">
+      One Target to Two Upstreams
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contacts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contacts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building-from-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building from source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-binaries-and-running-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the binaries and running Lobby
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting the binaries and running Lobby">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Lobby
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI Help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Lobby
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Lobby">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Lobby
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopping-lobby" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Lobby
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifying-a-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying a Config File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbosity-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verbosity Level
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lobby-systemd-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lobby systemd Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lobby systemd Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-lobby-systemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Lobby (systemd)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Lobby (systemd)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-root-user-systemd-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      As root user systemd service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="As root user systemd service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Improvement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-non-root-user-systemd-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      As non-root user systemd service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uninstall-lobby-systemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstall Lobby (systemd)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-version_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-lobby-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Lobby on Docker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Lobby on Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-lobby-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Lobby on Docker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-config-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Config on Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopping-lobby-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Lobby on Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbosity-level-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verbosity level on Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#things-to-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Things to Note
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Things to Note">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#container-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container Ports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-on-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Production on Docker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerations-for-production-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations for Production Deployments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traffic-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traffic Stats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating Config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-target-to-two-upstreams" class="md-nav__link">
+    <span class="md-ellipsis">
+      One Target to Two Upstreams
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Tutorials</h1>
+
+<h2 id="building-from-source">Building from source</h2>
+<p>In order to build Lobby from source, it is required to do so from an environment prepared to <a href="https://go.dev/doc/install">build go projects</a>.</p>
+<p>The build process is pretty simple. Go to a directory of your choosing and from there:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone --depth 1 https://github.com/ipbuff/lobby.git
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cd lobby
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>make build
+</span></code></pre></div>
+<p>Following the successful build, the resulting binaries can be found in the <code>./bin</code> directory.</p>
+<p>There will be two files:</p>
+<ul>
+<li><code>lobby-linux-amd64</code> for Linux system and amd64 architecture</li>
+<li><code>lobby-linux-arm64</code> for Linux system and arm64 architecture</li>
+</ul>
+<h2 id="getting-the-binaries-and-running-lobby">Getting the binaries and running Lobby</h2>
+<p>The Lobby binaries can be found on the <a href="https://github.com/ipbuff/lobby/releases">releases</a> of the Lobby <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span> Github repo.</p>
+<p>In case you have <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 0 0-.75.748 11.376 11.376 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137a15.74 15.74 0 0 0 2.93-.266 12.248 12.248 0 0 0 3.823-1.389 10.51 10.51 0 0 0 2.61-2.136c1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg></span> docker installed on the same host as where you're planning to run Lobby, do not use the Lobby binaries and use the <a href="#docker">docker</a> methods instead. The default <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 0 0-.75.748 11.376 11.376 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137a15.74 15.74 0 0 0 2.93-.266 12.248 12.248 0 0 0 3.823-1.389 10.51 10.51 0 0 0 2.61-2.136c1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg></span> docker iptables/nftables rules drop all the forwarding traffic. In case you still want to proceed with the binary setup in a server which also has docker, then you'll have to edit the docker generated iptables/nftables rules.</p>
+<h3 id="download-lobby">Download Lobby</h3>
+<p>The simplest method is to use the <a href="https://github.com/ipbuff/lobby/blob/main/scripts/getLobby.sh"><code>getLobby.sh</code></a> script which will detect your system and download the appropriate binary for your system. This script will also set a demo Lobby config file which can be used to test Lobby. This script is available <a href="https://ipbuff.com/getLobby">here</a>.</p>
+<p>Start by creating a directory where you want to download the Lobby binaries to. For this example, <code>~/lobby</code> will be used. The directory can be created with:</p>
+<div class="language-bash highlight"><span class="filename">Create directory to store Lobby</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">LOBBY_DIR</span><span class="o">=</span>~/lobby
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mkdir<span class="w"> </span><span class="nv">$LOBBY_DIR</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">cd</span><span class="w"> </span><span class="nv">$LOBBY_DIR</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">echo</span><span class="w"> </span>Successfully<span class="w"> </span>created<span class="w"> </span>the<span class="w"> </span>lobby<span class="w"> </span>dir<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">echo</span><span class="w"> </span>Failed<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>the<span class="w"> </span>lobby<span class="w"> </span>dir
+</span></code></pre></div>
+<p>A way to download the script and run it can be:</p>
+<div class="language-text highlight"><span class="filename">Get Lobby Binary and Config File</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>wget -q -O - https://ipbuff.com/getLobby | sh
+</span></code></pre></div>
+<p>Now if you check the contents of the directory, you should find there the Lobby binary named <code>lobby</code> and the demo configuration file named <code>lobby.conf</code>.</p>
+<div class="language-bash highlight"><span class="filename">List Directory Contents</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls
+</span></code></pre></div>
+<h3 id="cli-help">CLI Help</h3>
+<p>To get the command line interface (cli) help, which prints the flags available for Lobby, run Lobby with the <code>-h</code> flag.</p>
+<div class="language-bash highlight"><span class="filename">Print cli help</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./lobby<span class="w"> </span>-h
+</span></code></pre></div>
+<h3 id="check-version">Check Version</h3>
+<p>To check the Lobby version just run lobby with the <code>-v</code> flag. The version will be printed as result and the app will quit.</p>
+<div class="language-bash highlight"><span class="filename">Check Lobby version</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./lobby<span class="w"> </span>-v
+</span></code></pre></div>
+<h3 id="setting-permissions">Setting permissions</h3>
+<p>At this stage, you have to decide with which user you want to run Lobby with. Eventually the simplest way is to proceed as <code>root</code>, but we'll proceed this tutorial with the consideration that best practices should be followed even in introductory tutorials and in that case we'll assume that an unprivileged user is to be used.</p>
+<p>The script executed at <a href="#download-lobby">this</a> step has already ensured that the binary can only be executed by the owner user and group. Additionally, in order to run Lobby with an unprivileged user it is necessary to give permissions to the binary to run with a couple of linux capabilities which allow it to manage specifically the nftables locally. The capabilites are <code>NET_ADMIN</code> and <code>NET_RAW</code> and we'll follow the instructions described <a href="../installation/#permissions">here</a> to set them for the Lobby binary with the following command executed by the <code>root</code> user:</p>
+<div class="language-bash highlight"><span class="filename">Execute as root user</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>setcap<span class="w"> </span><span class="s1">&#39;cap_net_admin,cap_net_raw+ep&#39;</span><span class="w"> </span>lobby
+</span></code></pre></div>
+<p>The success of the command can be confirmed with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>getcap<span class="w"> </span>lobby
+</span></code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>With the expected output being:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>lobby<span class="w"> </span>cap_net_admin,cap_net_raw<span class="o">=</span>ep
+</span></code></pre></div>
+</div>
+<p>From here on, it is possible to run Lobby as an unprivileged user.</p>
+<p>Keep in mind that the Linux capabilities have to be set every time a new binary is built/downloaded - ie after every upgrade</p>
+<h3 id="running-lobby">Running Lobby</h3>
+<p>Running Lobby without any flags will start the load balancer with the local config file named <code>lobby.conf</code>. In case <code>lobby.conf</code> is not found or is inaccessible, then the <code>/etc/lobby/lobby.conf</code> path will be attempted next. In case either of the files fails to open, Lobby will quit with error code 1.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On <a href="#download-lobby">this</a> step, <a href="https://raw.githubusercontent.com/ipbuff/lobby/main/docs/examples/demo.conf">this</a> demo config file has been setup locally. In case you have followed a different method to set up the Lobby binaries, make sure that there is a Lobby configuration file at either the local directory of the Lobby binary or at <code>/etc/lobby/lobby.conf</code></p>
+</div>
+<p>Lobby can be started simply with:</p>
+<div class="language-bash highlight"><span class="filename">Start Lobby</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./lobby
+</span></code></pre></div>
+<h4 id="test-lobby">Test Lobby</h4>
+<p>As Lobby doesn't load balances localhost traffic, the tests have to be performed from another machine targeting the Lobby host.</p>
+<p>If you haven't changed anything on the demo config file, you should be able to successfully target your Lobby host on port <code>8082</code> <strong>from another machine</strong> to test if Lobby is working correctly. </p>
+<p>This can be achieved in many ways. One of them is with:</p>
+<div class="language-bash highlight"><span class="filename">Test Lobby from another machine</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..6<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>curl<span class="w"> </span>&lt;IP<span class="w"> </span>of<span class="w"> </span>Lobby<span class="w"> </span>host&gt;:8082<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Result</p>
+<p>In case of success, this test will call the load balancer 6 times on port <code>8082</code> and Lobby will load balance the traffic in round-robin mode across 3 different Lobby test upstreams.</p>
+<p>The expected output is:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>8081
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>8082
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>8083
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>8081
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>8082
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>8083
+</span></code></pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">In case of failure</p>
+<p>Make sure this test is performed from another machine as the traffic from the test machine is to be proxied through the Lobby host to the configured upstream. <code>curl localhost:8082</code> won't work and is expected to fail.</p>
+<p>If your only option is to test locally, consider using this <a href="#docker">docker setup</a>.</p>
+</div>
+<h3 id="update-config">Update Config</h3>
+<p>Lobby supports hot reloading of the configuration, which means that it is possible to update the configuration without having to stop and start the load balancer with the benefit of no traffic being temporarily lost in the process.</p>
+<p>This is achieved by updating the configuration file in use by Lobby and sending a SIGHUP signal to the running process.</p>
+<p>As an example, while Lobby is running, let's add another upstream to <code>target2</code> by appending the following config, which will add a new upstream to <code>target2</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;            - name: lobby-test-server4&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>lobby.conf
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;              host: lobby-test.ipbuff.com&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>lobby.conf
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;              port: 8084&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>lobby.conf
+</span></code></pre></div>
+<p>Now that the config file has been updated, we just need to send a <code>SIGHUP</code> signal to the running process of Lobby. This can be achieved with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pkill<span class="w"> </span>-SIGHUP<span class="w"> </span>lobby
+</span></code></pre></div>
+<p>Now that Lobby has reconfigured we can run the same test:</p>
+<div class="language-bash highlight"><span class="filename">Test Lobby from another machine</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..6<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>curl<span class="w"> </span>&lt;IP<span class="w"> </span>of<span class="w"> </span>Lobby<span class="w"> </span>host&gt;:8082<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Result</p>
+<p>And now given we have one extra test upstream, the expected output is:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>8081
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>8082
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>8083
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>8084
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>8081
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>8082
+</span></code></pre></div>
+</div>
+<h3 id="stopping-lobby">Stopping Lobby</h3>
+<p>Lobby can be stopped with <code>Ctrl+c</code> on the terminal where it is running in the foreground or with a SIGINT signal to the running process with: </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>pkill<span class="w"> </span>-SIGINT<span class="w"> </span>lobby
+</span></code></pre></div>
+<h3 id="specifying-a-config-file">Specifying a Config File</h3>
+<p>Lobby supports specifying a path to a specific config file. This can be achieved with the <code>-c</code> flag. For example: </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>./lobby<span class="w"> </span>-c<span class="w"> </span>&lt;path<span class="w"> </span>to<span class="w"> </span>config<span class="w"> </span>file&gt;
+</span></code></pre></div>
+<h3 id="verbosity-level">Verbosity Level</h3>
+<p>The default logging verbosity for Lobby is <code>Info</code>. It is possible to start Lobby with different levels of logging verbosity. This is achieved with the <code>-l</code> flag.</p>
+<p>The possible logging levels are:</p>
+<table>
+<thead>
+<tr>
+<th>Log Level</th>
+<th>Description</th>
+<th>Flag string</th>
+<th>Displays</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>Fatal errors and similar</td>
+<td><code>critical</code></td>
+<td><code>critical</code></td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>Potentially problematic events</td>
+<td><code>warning</code></td>
+<td><code>critical</code>/<code>warning</code></td>
+</tr>
+<tr>
+<td>Info</td>
+<td>Potentially relevant information</td>
+<td><code>info</code></td>
+<td><code>critical</code>/<code>warning</code>/<code>info</code></td>
+</tr>
+<tr>
+<td>Debug</td>
+<td>User debugging level</td>
+<td><code>debug</code></td>
+<td><code>critical</code>/<code>warning</code>/<code>info</code>/<code>debug</code></td>
+</tr>
+<tr>
+<td>DebugVerbose</td>
+<td>Developer debugging level</td>
+<td><code>debugverbose</code></td>
+<td><code>critical</code>/<code>warning</code>/<code>info</code>/<code>debug</code>/<code>debugverbose</code></td>
+</tr>
+</tbody>
+</table>
+<p>So, for instance to set the logging level to Debug level, start Lobby with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>./lobby<span class="w"> </span>-l<span class="w"> </span>debug
+</span></code></pre></div>
+<h2 id="lobby-systemd-service">Lobby systemd Service</h2>
+<p>Other than for testing purposes, it is recommended to run Lobby as a systemd service.</p>
+<h3 id="install-lobby-systemd">Install Lobby (systemd)</h3>
+<p><a href="https://github.com/ipbuff/lobby/releases/latest/download/installLobby.sh">This</a> script provides a way to setup Lobby as a systemd service. It does the following:</p>
+<ul>
+<li>Downloads the latest Lobby binary for the appropriate system</li>
+<li>Places the binary in <code>/usr/local/bin/lobby</code> with conservative permissions</li>
+<li>Sets a demo config file in <code>/etc/lobby/lobby.conf</code></li>
+<li>Creates a systemd service until file for Lobby <ul>
+<li>at <code>/etc/systemd/system/lobby.service</code> for <code>root</code> user</li>
+<li>otherwise at <code>~/.config/systemd/user/lobby.service</code> for other users</li>
+</ul>
+</li>
+</ul>
+<p>The script accepts a username as an argument in order to install Lobby with the appopriate permissions for the given user. In case no argument is provided, it is assumed that the installation is to be done for the <code>root</code> user.</p>
+<p>The installation script has to be run as <code>root</code> user given it requires privileged permissions to set everything thing up.</p>
+<h4 id="as-root-user-systemd-service">As root user systemd service</h4>
+<p>In order to use the script to install Lobby for the <code>root</code> user:</p>
+<div class="language-bash highlight"><span class="filename">Run as root user</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>wget<span class="w"> </span>-q<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span>https://ipbuff.com/installLobby<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</span></code></pre></div>
+<p>Following the succesful completion of the installation script it is necessary to reload the systemd deamon in order to make the Lobby systemd service available. This can be achieved by running the following command as <code>root</code> user:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>systemctl daemon-reload
+</span></code></pre></div>
+<p>Now you can start Lobby with:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>systemctl start lobby
+</span></code></pre></div>
+<p>And in case you want Lobby to start automatically at system boot:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>systemctl enable lobby
+</span></code></pre></div>
+<p>To stop the Lobby service:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>systemctl stop lobby
+</span></code></pre></div>
+<p>And to refresh the Lobby configuration following config file changes:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>systemctl reload lobby
+</span></code></pre></div>
+<h5 id="security-improvement">Security Improvement</h5>
+<p>While leaving the systemd service managed by root, so it can be started automatically at every system boot, consider executing the Lobby binary with an unprivileged user.</p>
+<p>For that purpose, create a specific user, give <code>rwx</code> permissions to it or its group to the <code>/etc/lobby/</code> directory and at least <code>x</code> to the binary <code>/usr/local/bin/lobby</code>.</p>
+<p>Then to ensure that the systemd service runs Lobby with the desired user add the <code>User=changeMe</code> argument somewhere in the <code>[Service]</code> section of the Lobby systemd service unit file at <code>/etc/systemd/system/lobby.service</code>. From the previous example change <code>changeMe</code> to the user that was created and to be used.</p>
+<p>Once the Lobby systemd service unit file has been updated with the <code>User</code> argument under the <code>[Service]</code> section, refresh systemd with:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>systemctl daemon-reload
+</span></code></pre></div>
+<p>And for good measure stop, disable and enable and start again the Lobby systemd service:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>systemctl stop lobby
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>systemctl disable lobby
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>systemctl enable lobby
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>systemctl start lobby
+</span></code></pre></div>
+<h4 id="as-non-root-user-systemd-service">As non-root user systemd service</h4>
+<p>In order to use the script to install Lobby for the <code>john</code> user:</p>
+<div class="language-text highlight"><span class="filename">Run as root user and replace 'john' with your username</span><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>wget -q -O - https://ipbuff.com/installLobby | sh -s john
+</span></code></pre></div>
+<p>Following the succesful completion of the installation script it is necessary to reload the systemd deamon in order to make the Lobby systemd service available. In case you've proceeded with the installation as a <code>non-root</code> user, this can be achieved by running the following command with the desired user: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>systemctl --user daemon-reload
+</span></code></pre></div>
+<p>Now you can start Lobby with:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>systemctl --user start lobby
+</span></code></pre></div>
+<p>And in case you want Lobby to start automatically at <strong>first user login</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>systemctl --user enable lobby
+</span></code></pre></div>
+<p>To stop the Lobby service:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>systemctl --user stop lobby
+</span></code></pre></div>
+<p>And to refresh the Lobby configuration following config file changes:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>systemctl --user reload lobby
+</span></code></pre></div>
+<h3 id="uninstall-lobby-systemd">Uninstall Lobby (systemd)</h3>
+<p>It is recommended to stop and disable the Lobby systemd service before uninstalling Lobby.</p>
+<p>In order to uninstall Lobby in case the <a href="https://github.com/ipbuff/lobby/releases/latest/download/installLobby.sh"><code>installLobby.sh</code></a> script was used, all that is necessary is to remove:</p>
+<ul>
+<li>the binary located in <code>/usr/local/bin/lobby</code></li>
+<li>the configuration directory at <code>/etc/lobby/</code></li>
+<li>eventually the systemd service unit files for the root user at <code>/etc/systemd/system/lobby.service</code></li>
+<li>eventually the systemd service unit files for non-root users</li>
+</ul>
+<p>A <a href="https://github.com/ipbuff/lobby/releases/latest/download/uninstallLobby.sh">script</a> has been prepared for that. Before using it, backup your config file as it is removed as part of the uninstall process.</p>
+<p>You can run it as a root user with:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not forget to stop and disable the Lobby systemd service beforehand</p>
+</div>
+<div class="language-text highlight"><span class="filename">Run as root</span><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>wget -q -O - https://ipbuff.com/uninstallLobby | sh
+</span></code></pre></div>
+<p>And then finally, complete with a systemd refresh with <code>systemctl daemon-reload</code>.</p>
+<h2 id="docker">Docker</h2>
+<p>This tutorial will be assuming your default docker network is a bridge network (as it is most likely the case and) as it happens by default after docker install. In case this is not the case, adjust the steps and commands accordingly.</p>
+<p>Change directory to where you will be storing your Lobby config file before proceeding with this docker tutorial.</p>
+<h3 id="check-version_1">Check Version</h3>
+<p>To start with, let's check the Lobby version from the container images hosted at <a href="https://hub.docker.com/r/ipbuff/lobby"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 0 0-.75.748 11.376 11.376 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137a15.74 15.74 0 0 0 2.93-.266 12.248 12.248 0 0 0 3.823-1.389 10.51 10.51 0 0 0 2.61-2.136c1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg></span> docker hub</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>docker run --rm \
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>  --name lobby \
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>  --cap-add=NET_ADMIN --cap-add=NET_RAW \
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>  ipbuff/lobby:latest \
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>  ./lobby -v
+</span></code></pre></div>
+<h3 id="running-lobby-on-docker">Running Lobby on Docker</h3>
+<p>Running Lobby without any flags will start the load balancer with the local config file named <code>lobby.conf</code>.</p>
+<p>Generate your own Lobby config file or download a demo config file like so:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>wget<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">  </span>-O<span class="w"> </span>lobby.conf<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w">  </span>-q<span class="w"> </span>https://raw.githubusercontent.com/ipbuff/lobby/main/docs/examples/demo.conf
+</span></code></pre></div>
+<p>Then Lobby can be started simply with:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>docker run --rm -d \
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>  --name lobby \
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>  --cap-add=NET_ADMIN --cap-add=NET_RAW \
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>  -v $(pwd)/lobby.conf:/lobby/lobby.conf \
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>  -p 8082:8082 \
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>  ipbuff/lobby:latest
+</span></code></pre></div>
+<h4 id="test-lobby-on-docker">Test Lobby on Docker</h4>
+<p>If you haven't changed anything on the demo config file, you should be able to successfully target your port <code>8082</code> to test if Lobby is working correctly. </p>
+<p>This can be achieved in many ways. One of them is with:</p>
+<div class="language-bash highlight"><span class="filename">Test Lobby from another machine</span><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..6<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>curl<span class="w"> </span>localhost:8082<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Result</p>
+<p>In case of success, this test will call the load balancer 6 times on port <code>8082</code> and Lobby will load balance the traffic in round-robin mode across 3 different Lobby test upstreams.</p>
+<p>The expected output is:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>8081
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>8082
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>8083
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>8081
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>8082
+</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>8083
+</span></code></pre></div>
+</div>
+<h3 id="update-config-on-docker">Update Config on Docker</h3>
+<p>As in <a href="#update-config">here</a>, while Lobby is running, let's add another upstream to <code>target2</code> by appending the following config, which will add a new upstream to <code>target2</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;            - name: lobby-test-server4&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>lobby.conf
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;              host: lobby-test.ipbuff.com&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>lobby.conf
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;              port: 8084&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>lobby.conf
+</span></code></pre></div>
+<p>Now that the config file has been updated, we just need to send a <code>SIGHUP</code> signal to the running process of Lobby in the container. This can be achieved with:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>docker kill -s SIGHUP lobby
+</span></code></pre></div>
+<p>Now that Lobby has reconfigured we can run the same test:</p>
+<div class="language-bash highlight"><span class="filename">Test Lobby from another machine</span><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..6<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>curl<span class="w"> </span><span class="si">${</span><span class="nv">LOBBY_IP</span><span class="si">}</span>:8082<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</span></code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Result</p>
+<p>And now given we have one extra test upstream, the expected output is:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>8081
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>8082
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>8083
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>8084
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>8081
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>8082
+</span></code></pre></div>
+</div>
+<h3 id="stopping-lobby-on-docker">Stopping Lobby on Docker</h3>
+<p>Lobby can be stopped with <code>Ctrl+c</code> on the terminal where it is running in the foreground or with a SIGINT signal to the running process with: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>docker kill -s SIGINT lobby
+</span></code></pre></div>
+<h3 id="verbosity-level-on-docker">Verbosity level on Docker</h3>
+<p>As explained <a href="#verbosity-level">here</a>, for instance to set the logging level to Debug level, start Lobby with:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>docker run --rm -d \
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>  --name lobby \
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>  --cap-add=NET_ADMIN --cap-add=NET_RAW \
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>  -v $(pwd)/lobby.conf:/lobby/lobby.conf \
+</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>  -p 8082:8082
+</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>  ipbuff/lobby:latest \
+</span><span id="__span-44-7"><a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a>  ./lobby -l debug
+</span></code></pre></div>
+<h3 id="things-to-note">Things to Note</h3>
+<h4 id="container-ports">Container Ports</h4>
+<p>For <a href="#running-lobby-on-docker">this</a> type of docker deployment, consider specifying a range of ports to be exposed for the Lobby docker container, instead of individual ones. This is in case future load balancing configuration requires load balancing on new/other ports. For instance, to expose from port 8000 to 9000 one could use the <code>-p 8000-9000:8000-9000</code> flag instead.</p>
+<h4 id="production-on-docker">Production on Docker</h4>
+<p>For production deployments, consider creating a specific docker network to be used by exclusively by the Lobby containers and not subject to NAT'ing.</p>
+<h2 id="considerations-for-production-deployments">Considerations for Production Deployments</h2>
+<p>The examples above are mostly useful for local testing or for home/small load applications. </p>
+<p>However, to host Lobby for production it is important to have in consideration the wider context of the deployment, such as:</p>
+<ul>
+<li>The traffic routing to the Lobby server host</li>
+<li>The traffic routing from the Lobby server host</li>
+<li>Lobby traffic isolation</li>
+<li>The Lobby server host resources</li>
+<li>Lobby redundancy</li>
+<li>etc</li>
+</ul>
+<p>Nevertheless, for a high performance, high throughput and high bandwidth environment, consider the <a href="#lobby-systemd-service">systemd service</a> or similar deployment type for Lobby in a host that is protected by a firewall and where the Lobby internet address is available at the Lobby host without NAT rules in between. The Lobby (or other load balancers) redundancy implementation depends on the use case and therefore cannot be subject to a generic recommendation in this tutorial.</p>
+<p>In case of need for support on production deployments or operation, consider reaching out to the <a href="https://igor.borisoglebski.com">project creator</a> for consultancy and professional services.</p>
+<h2 id="traffic-stats">Traffic Stats</h2>
+<p>This part of Lobby is still in its infancy and unfortunately in extremelly low capacity. Feel free to reach out to the <a href="https://igor.borisoglebski.com">project creator</a> in case you're willing to support the acceleration of the development or feel free contribute with the capability through the <a href="https://github.com/ipbuff/lobby"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>Github project</a>.</p>
+<p>However, the most basic measure has been implemented and can be checked through <code>nftables</code>. All targets are assigned a <a href="https://wiki.nftables.org/wiki-nftables/index.php/Counters">nftables counter</a> which keeps track of the traffic incoming to each target. This can be checked for instance with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>nft<span class="w"> </span>list<span class="w"> </span>counters
+</span></code></pre></div>
+<p>It outputs the packets and bytes incoming to each target.</p>
+<p>This method will be further enhanced to keep track of more things, accessible through other methods and integratable with external systems such as prometheus.</p>
+<h2 id="generating-config">Generating Config</h2>
+<p>Generating the Lobby config should be relatively intuitive for anyone who has worked with <a href="https://yaml.org/">YAML</a> structures before.</p>
+<h3 id="one-target-to-two-upstreams">One Target to Two Upstreams</h3>
+<p>Let's create a config file with Lobby listening TCP traffic on port 8082 and load balancing to two upstreams in round-robin distribution mode where one of the upstreams is expecting traffic on IP 1.1.1.1 and port 80, while the other one on IP 1.1.1.2 and also port 80. </p>
+<p>Every config file starts with:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="nt">lb</span><span class="p">:</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">engine</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nftables</span>
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="nt">targets</span><span class="p">:</span>
+</span></code></pre></div>
+<p>We start by adding the target definition which is where Lobby is listening for that type of traffic with:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="nt">lb</span><span class="p">:</span>
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">engine</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nftables</span>
+</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="w">    </span><span class="nt">targets</span><span class="p">:</span>
+</span><span id="__span-47-4"><a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">toCloudflare</span>
+</span><span id="__span-47-5"><a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a><span class="w">        </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tcp</span>
+</span><span id="__span-47-6"><a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a><span class="w">        </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8082</span>
+</span></code></pre></div>
+<p>Now that we have defined where Lobby is listening, we need to specify how the traffic is distributed:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="nt">lb</span><span class="p">:</span>
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">engine</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nftables</span>
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="w">    </span><span class="nt">targets</span><span class="p">:</span>
+</span><span id="__span-48-4"><a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">toCloudflare</span>
+</span><span id="__span-48-5"><a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a><span class="w">        </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tcp</span>
+</span><span id="__span-48-6"><a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a><span class="w">        </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8082</span>
+</span><span id="__span-48-7"><a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a><span class="w">        </span><span class="nt">upstream_group</span><span class="p">:</span>
+</span><span id="__span-48-8"><a id="__codelineno-48-8" name="__codelineno-48-8" href="#__codelineno-48-8"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloudflareServers</span>
+</span><span id="__span-48-9"><a id="__codelineno-48-9" name="__codelineno-48-9" href="#__codelineno-48-9"></a><span class="w">          </span><span class="nt">distribution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">round-robin</span>
+</span><span id="__span-48-10"><a id="__codelineno-48-10" name="__codelineno-48-10" href="#__codelineno-48-10"></a><span class="w">          </span><span class="nt">upstreams</span><span class="p">:</span>
+</span></code></pre></div>
+<p>At this stage, this config file is not valid yet, because we haven't specified the upstream servers to where the traffic will be load balanced. So, we need to add them:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="nt">lb</span><span class="p">:</span>
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">engine</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nftables</span>
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="w">    </span><span class="nt">targets</span><span class="p">:</span>
+</span><span id="__span-49-4"><a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">toCloudflare</span>
+</span><span id="__span-49-5"><a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a><span class="w">        </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tcp</span>
+</span><span id="__span-49-6"><a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a><span class="w">        </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8082</span>
+</span><span id="__span-49-7"><a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a><span class="w">        </span><span class="nt">upstream_group</span><span class="p">:</span>
+</span><span id="__span-49-8"><a id="__codelineno-49-8" name="__codelineno-49-8" href="#__codelineno-49-8"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloudflareServers</span>
+</span><span id="__span-49-9"><a id="__codelineno-49-9" name="__codelineno-49-9" href="#__codelineno-49-9"></a><span class="w">          </span><span class="nt">distribution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">round-robin</span>
+</span><span id="__span-49-10"><a id="__codelineno-49-10" name="__codelineno-49-10" href="#__codelineno-49-10"></a><span class="w">          </span><span class="nt">upstreams</span><span class="p">:</span>
+</span><span id="__span-49-11"><a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloudflareServer1</span>
+</span><span id="__span-49-12"><a id="__codelineno-49-12" name="__codelineno-49-12" href="#__codelineno-49-12"></a><span class="w">              </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.1.1.1</span>
+</span><span id="__span-49-13"><a id="__codelineno-49-13" name="__codelineno-49-13" href="#__codelineno-49-13"></a><span class="w">              </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+</span><span id="__span-49-14"><a id="__codelineno-49-14" name="__codelineno-49-14" href="#__codelineno-49-14"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloudflareServer2</span>
+</span><span id="__span-49-15"><a id="__codelineno-49-15" name="__codelineno-49-15" href="#__codelineno-49-15"></a><span class="w">              </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.1.1.2</span>
+</span><span id="__span-49-16"><a id="__codelineno-49-16" name="__codelineno-49-16" href="#__codelineno-49-16"></a><span class="w">              </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+</span></code></pre></div>
+<p>And that's it! The most basic load balancing config file was created. For further references check <a href="../configuration/">here</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuration">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Configuration
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../support/" class="md-footer__link md-footer__link--next" aria-label="Next: Support">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Support
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - Igor Borisoglebski
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ipbuff/lobby/" target="_blank" rel="noopener" title="Lobby on Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.instant", "navigation.sections", "navigation.expand", "navigation.top", "toc.follow", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
